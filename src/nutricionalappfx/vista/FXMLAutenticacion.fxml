@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="nutricionalappfx.controlador.FXMLAutenticacionController">
+   <children>
+      <Pane prefHeight="400.0" prefWidth="300.0">
+         <children>
+            <ImageView fitHeight="204.0" fitWidth="249.0" layoutX="26.0" layoutY="92.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../recurso/main_menu_background.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <Pane layoutX="300.0" prefHeight="400.0" prefWidth="300.0">
+         <children>
+            <Label layoutX="41.0" layoutY="29.0" prefHeight="41.0" prefWidth="218.0" text="Nutricional System" textAlignment="CENTER">
+               <font>
+                  <Font name="Baloo" size="24.0" />
+               </font>
+            </Label>
+            <VBox fx:id="vbCredenciales" layoutX="17.0" layoutY="86.0" prefHeight="289.0" prefWidth="270.0">
+               <children>
+                  <Label prefHeight="65.0" prefWidth="243.0" text="Ingresa tus credenciales para Iniciar Sesion" textAlignment="JUSTIFY" wrapText="true">
+                     <VBox.margin>
+                        <Insets left="15.0" top="10.0" />
+                     </VBox.margin>
+                  </Label>
+                  <Label text="Nombre de usuario" />
+                  <TextField fx:id="tftNoPersonal" prefHeight="25.0" prefWidth="181.0" promptText="Ejemplo: Vegetta777">
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                  </TextField>
+                  <Label fx:id="lblErrorNoPersonal" prefWidth="197.0" text="Nombre de Usuario Incorrecto" textFill="RED">
+                     <font>
+                        <Font size="8.0" />
+                     </font>
+                  </Label>
+                  <Label text="Contraseña" />
+                  <TextField fx:id="tftPassword" prefHeight="25.0" prefWidth="193.0" promptText="***********" />
+                  <Label fx:id="lblErrorContrasenia" prefWidth="197.0" text="Contraseña Incorrecta" textFill="RED">
+                     <font>
+                        <Font size="8.0" />
+                     </font>
+                  </Label>
+                  <Button mnemonicParsing="false" onAction="#handleBtnIngresar" text="Ingresar" />
+               </children>
+            </VBox>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>
