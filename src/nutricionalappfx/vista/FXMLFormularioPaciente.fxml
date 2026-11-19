@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane id="AnchorPane" prefHeight="620.0" prefWidth="640.0" style="-fx-background-color: #F4F6F8;" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="nutricionalappfx.controlador.FXMLFormularioPacienteController">
+    <top>
+        <HBox alignment="CENTER_LEFT" prefHeight="70.0" style="-fx-background-color: #1E5AA8;">
+            <padding>
+                <Insets bottom="10.0" left="25.0" right="25.0" top="10.0" />
+            </padding>
+            <children>
+                <Label style="-fx-font-size: 22px; -fx-font-weight: bold;" text="Formulario de paciente" textFill="WHITE" />
+            </children>
+        </HBox>
+    </top>
+
+    <center>
+        <VBox style="-fx-background-color: white; -fx-background-radius: 10; -fx-border-color: #D0D7DE; -fx-border-radius: 10;" BorderPane.alignment="CENTER">
+            <BorderPane.margin>
+                <Insets bottom="10.0" left="25.0" right="25.0" top="20.0" />
+            </BorderPane.margin>
+            <padding>
+                <Insets bottom="25.0" left="25.0" right="25.0" top="25.0" />
+            </padding>
+            <children>
+                <GridPane hgap="20.0" vgap="18.0">
+                    <columnConstraints>
+                        <ColumnConstraints hgrow="ALWAYS" minWidth="10.0" percentWidth="50.0" />
+                        <ColumnConstraints hgrow="ALWAYS" minWidth="10.0" percentWidth="50.0" />
+                    </columnConstraints>
+                    <children>
+                        <VBox spacing="6.0" GridPane.columnIndex="0" GridPane.rowIndex="0">
+                            <children>
+                                <Label style="-fx-font-size: 13px; -fx-font-weight: bold; -fx-text-fill: #3C4650;" text="Nombre" />
+                                <TextField fx:id="tfNombre" prefHeight="38.0" promptText="Juan" style="-fx-background-color: white; -fx-background-radius: 8; -fx-border-color: #D0D7DE; -fx-border-radius: 8; -fx-padding: 0 12 0 12;" />
+                            </children>
+                        </VBox>
+                        <VBox spacing="6.0" GridPane.columnIndex="1" GridPane.rowIndex="0">
+                            <children>
+                                <Label style="-fx-font-size: 13px; -fx-font-weight: bold; -fx-text-fill: #3C4650;" text="Apellido paterno" />
+                                <TextField fx:id="tfApellidoPaterno" prefHeight="38.0" promptText="Sánchez" style="-fx-background-color: white; -fx-background-radius: 8; -fx-border-color: #D0D7DE; -fx-border-radius: 8; -fx-padding: 0 12 0 12;" />
+                            </children>
+                        </VBox>
+                        <VBox spacing="6.0" GridPane.columnIndex="0" GridPane.rowIndex="1">
+                            <children>
+                                <Label style="-fx-font-size: 13px; -fx-font-weight: bold; -fx-text-fill: #3C4650;" text="Apellido materno" />
+                                <TextField fx:id="tfApellidoMaterno" prefHeight="38.0" promptText="Pérez" style="-fx-background-color: white; -fx-background-radius: 8; -fx-border-color: #D0D7DE; -fx-border-radius: 8; -fx-padding: 0 12 0 12;" />
+                            </children>
+                        </VBox>
+                        <VBox spacing="6.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                            <children>
+                                <Label style="-fx-font-size: 13px; -fx-font-weight: bold; -fx-text-fill: #3C4650;" text="Teléfono de contacto" />
+                                <TextField fx:id="tfTelefono" prefHeight="38.0" promptText="2288990012" style="-fx-background-color: white; -fx-background-radius: 8; -fx-border-color: #D0D7DE; -fx-border-radius: 8; -fx-padding: 0 12 0 12;" />
+                            </children>
+                        </VBox>
+                        <VBox spacing="6.0" GridPane.columnIndex="0" GridPane.rowIndex="2">
+                            <children>
+                                <Label style="-fx-font-size: 13px; -fx-font-weight: bold; -fx-text-fill: #3C4650;" text="Fecha de nacimiento" />
+                                <DatePicker fx:id="dpFechaNacimiento" maxWidth="Infinity" prefHeight="38.0" />
+                            </children>
+                        </VBox>
+                        <VBox spacing="6.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                            <children>
+                                <Label style="-fx-font-size: 13px; -fx-font-weight: bold; -fx-text-fill: #3C4650;" text="Sexo" />
+                                <HBox alignment="CENTER_LEFT" prefHeight="38.0" spacing="25.0">
+                                    <children>
+                                        <RadioButton fx:id="rbHombre" mnemonicParsing="false" text="Hombre">
+                                            <toggleGroup>
+                                                <ToggleGroup fx:id="tgSexo" />
+                                            </toggleGroup>
+                                        </RadioButton>
+                                        <RadioButton fx:id="rbMujer" mnemonicParsing="false" text="Mujer" toggleGroup="$tgSexo" />
+                                    </children>
+                                </HBox>
+                            </children>
+                        </VBox>
+                        <VBox spacing="6.0" GridPane.columnIndex="0" GridPane.rowIndex="3">
+                            <children>
+                                <Label style="-fx-font-size: 13px; -fx-font-weight: bold; -fx-text-fill: #3C4650;" text="Altura" />
+                                <TextField fx:id="tfAltura" prefHeight="38.0" promptText="188 cm" style="-fx-background-color: white; -fx-background-radius: 8; -fx-border-color: #D0D7DE; -fx-border-radius: 8; -fx-padding: 0 12 0 12;" />
+                            </children>
+                        </VBox>
+                        <VBox spacing="6.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                            <children>
+                                <Label style="-fx-font-size: 13px; -fx-font-weight: bold; -fx-text-fill: #3C4650;" text="Peso inicial" />
+                                <TextField fx:id="tfPeso" prefHeight="38.0" promptText="67 kg" style="-fx-background-color: white; -fx-background-radius: 8; -fx-border-color: #D0D7DE; -fx-border-radius: 8; -fx-padding: 0 12 0 12;" />
+                            </children>
+                        </VBox>
+                        <VBox spacing="6.0" GridPane.columnIndex="0" GridPane.columnSpan="2" GridPane.rowIndex="4">
+                            <children>
+                                <Label style="-fx-font-size: 13px; -fx-font-weight: bold; -fx-text-fill: #3C4650;" text="Correo electrónico" />
+                                <TextField fx:id="tfCorreo" prefHeight="38.0" promptText="paciente@gmail.com" style="-fx-background-color: white; -fx-background-radius: 8; -fx-border-color: #D0D7DE; -fx-border-radius: 8; -fx-padding: 0 12 0 12;" />
+                            </children>
+                        </VBox>
+                    </children>
+                </GridPane>
+            </children>
+        </VBox>
+    </center>
+
+    <bottom>
+        <HBox alignment="CENTER_RIGHT" spacing="10.0" BorderPane.alignment="CENTER">
+            <padding>
+                <Insets bottom="25.0" left="25.0" right="25.0" top="10.0" />
+            </padding>
+            <children>
+                <Button mnemonicParsing="false" onAction="#handleBtnCancelar" prefHeight="38.0" prefWidth="110.0" style="-fx-background-color: #E4E8EC; -fx-background-radius: 8; -fx-text-fill: #3C4650; -fx-font-weight: bold; -fx-cursor: hand;" text="Cancelar" />
+                <Button mnemonicParsing="false" onAction="#handleBtnConfirmar" prefHeight="38.0" prefWidth="110.0" style="-fx-background-color: #2F7DD1; -fx-background-radius: 8; -fx-text-fill: white; -fx-font-weight: bold; -fx-cursor: hand;" text="Confirmar" />
+            </children>
+        </HBox>
+    </bottom>
+</BorderPane>

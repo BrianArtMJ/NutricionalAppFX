@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane id="AnchorPane" prefHeight="700.0" prefWidth="1000.0" style="-fx-background-color: #F4F6F8;" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="nutricionalappfx.controlador.FXMLAdminPacienteController">
+    <top>
+        <VBox>
+            <children>
+                <HBox alignment="CENTER_LEFT" prefHeight="70.0" spacing="15.0" style="-fx-background-color: #1E5AA8;">
+                    <padding>
+                        <Insets bottom="10.0" left="25.0" right="25.0" top="10.0" />
+                    </padding>
+                    <children>
+                        <ImageView fitHeight="32.0" fitWidth="32.0" onMouseClicked="#handleBtnRegresar" pickOnBounds="true" preserveRatio="true" style="-fx-cursor: hand;">
+                            <image>
+                                <Image url="@../recurso/back.png" />
+                            </image>
+                        </ImageView>
+                        <Label style="-fx-font-size: 22px; -fx-font-weight: bold;" text="Administración de pacientes" textFill="WHITE" />
+                    </children>
+                </HBox>
+                <HBox alignment="CENTER_LEFT" spacing="10.0">
+                    <padding>
+                        <Insets bottom="5.0" left="25.0" right="25.0" top="20.0" />
+                    </padding>
+                    <children>
+                        <TextField fx:id="tfBuscar" prefHeight="38.0" prefWidth="320.0" promptText="Buscar paciente..." style="-fx-background-color: white; -fx-background-radius: 8; -fx-border-color: #D0D7DE; -fx-border-radius: 8; -fx-padding: 0 12 0 12;" />
+                        <Button mnemonicParsing="false" onAction="#btnBuscar" prefHeight="38.0" prefWidth="90.0" style="-fx-background-color: #2F7DD1; -fx-background-radius: 8; -fx-text-fill: white; -fx-font-weight: bold; -fx-cursor: hand;" text="Buscar" />
+                        <Region HBox.hgrow="ALWAYS" />
+                        <Button mnemonicParsing="false" onAction="#btnAlta" prefHeight="38.0" prefWidth="95.0" style="-fx-background-color: #2E9E6B; -fx-background-radius: 8; -fx-text-fill: white; -fx-font-weight: bold; -fx-cursor: hand;" text="Alta" />
+                        <Button mnemonicParsing="false" onAction="#btnEditar" prefHeight="38.0" prefWidth="95.0" style="-fx-background-color: #F2A900; -fx-background-radius: 8; -fx-text-fill: white; -fx-font-weight: bold; -fx-cursor: hand;" text="Edición" />
+                        <Button mnemonicParsing="false" onAction="#btnBaja" prefHeight="38.0" prefWidth="95.0" style="-fx-background-color: #D64545; -fx-background-radius: 8; -fx-text-fill: white; -fx-font-weight: bold; -fx-cursor: hand;" text="Baja" />
+                    </children>
+                </HBox>
+            </children>
+        </VBox>
+    </top>
+    <center>
+        <TableView fx:id="tblTablaPacientes" style="-fx-background-color: white; -fx-background-radius: 8; -fx-border-color: #D0D7DE; -fx-border-radius: 8;" BorderPane.alignment="CENTER">
+            <placeholder>
+                <Label text="No hay pacientes para mostrar" textFill="#8A94A0" />
+            </placeholder>
+            <columns>
+                <TableColumn prefWidth="90.0" text="Código" />
+                <TableColumn prefWidth="170.0" text="Nombre" />
+                <TableColumn prefWidth="165.0" text="Apellido paterno" />
+                <TableColumn prefWidth="165.0" text="Apellido materno" />
+                <TableColumn prefWidth="170.0" text="Fecha de nacimiento" />
+                <TableColumn prefWidth="185.0" text="Teléfono de contacto" />
+            </columns>
+            <BorderPane.margin>
+                <Insets bottom="25.0" left="25.0" right="25.0" top="15.0" />
+            </BorderPane.margin>
+        </TableView>
+    </center>
+</BorderPane>
